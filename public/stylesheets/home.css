@@ -1,0 +1,132 @@
+body{
+    
+    background-image:url("../images/1342751.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+     font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.username{
+    display:flex;
+    font-size: 25px;
+    align-items: center;
+    justify-content: center;
+    color:rgb(145, 5, 163);
+}
+.postform form{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.postform input{
+    border-radius:4px;
+    height:30px;
+    color:white;
+    border:none;
+    padding:5px;
+}
+#file-upload{
+    border-radius: 4px;
+    background-color:rgb(68, 16, 189) ;
+    margin:10px 0px 10px 0px;
+    border:none;
+    color:white;
+  text-align: center;
+   font-family: "Bebas Neue", sans-serif;
+   font-size:15px;
+   padding:6px;
+   cursor:pointer;
+  font-style: normal;
+
+}
+#delete{
+    border-radius: 5px;
+    border:none;
+    background-color: rgb(241, 82, 82);
+    color:white;
+    position: absolute;
+    right:9px;
+    bottom:10px;
+}
+#latest{
+    font-size: 40px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    color:rgb(45, 35, 180);
+}
+.posts{
+    justify-content: center;
+    display:flex;
+    flex-direction: grid;
+    flex-wrap:wrap;
+    gap:10px;
+    
+}
+.logout{
+    position: absolute;
+    right:40px;
+    top:30px;
+}
+.logout input{
+    background-color: red;
+    color:white;
+    border:none;
+    border-radius: 3px;
+    padding:5px;
+}
+#text{
+    width:200px;
+    height: 100px;
+    text-align: center;
+    resize : none;
+    border-radius:4px;
+}
+.postform form{
+    display: flex;
+}
+.postcontent{
+    background-color: rgba(135, 193, 226, 0.801);
+    display:flex;
+  position: relative;
+  flex-direction: column;
+    margin:10px;
+    width:300px;
+    border-radius:5px;
+    padding:10px;
+}
+
+#username{
+    color:rgb(3, 3, 151);
+    margin:0px;
+}
+#content{
+    color:white;
+    font-size: 15px;
+    margin:0px;
+}
+
+#input {
+  background: #5111b8;   /* green */
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+  text-align: center;
+   font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+#input:hover {
+  background: #6e227e;
+}
+
+#input:active {
+  transform: scale(0.95);
+}

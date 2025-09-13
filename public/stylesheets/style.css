@@ -1,0 +1,88 @@
+body{
+    background-image:url("../images/1354206.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+ 
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+
+    
+}
+.userform{
+    display:flex;
+    align-items: center;
+    justify-content:center;
+     /* margin-right: 500px;
+    margin-top:90px; */
+
+
+}
+
+.title{
+    display:flex;
+    color:rgba(230, 22, 22, 0.89);
+    font-size: 30px;
+    align-items: center;
+    justify-content: center;
+}
+input{
+    border-radius:5px;
+    border-style:none;
+    margin:5px;
+    height:30px;
+}
+input[type="submit"]{
+   background-color: rgb(226, 49, 49);
+   font-family: "Bebas Neue", sans-serif;
+   text-align: center;
+  font-style: normal;
+}
+.register{
+   
+    align-items: center;
+    justify-content: center;
+    display:flex;
+    flex-direction:column;
+     border-radius:5px;
+    padding:7px;
+}
+input::placeholder{
+    text-align: center;
+}
+.register h1{
+  color:rgba(255, 255, 255, 0.808);
+}
+.register form{ 
+    border-radius:5px;
+    padding:7px;
+    display:flex;
+    align-items:center;
+    justify-content: center;
+    flex-direction: column;
+     background: rgba(255, 255, 255, 0.3); 
+  backdrop-filter: blur(10px); 
+  -webkit-backdrop-filter: blur(10px);
+    
+     border:1px solid rgb(255, 255, 255);
+}
+.signin{
+    border:1px solid rgb(255, 255, 255);
+    border-radius:5px;
+    padding:7px;
+    display:flex;
+    align-items:center;
+    justify-content: center;
+    flex-direction: column;
+     background: rgba(255, 255, 255, 0.3); 
+  backdrop-filter: blur(10px); 
+  -webkit-backdrop-filter: blur(10px);
+}
+.signin h1{
+    color:rgba(255, 255, 255, 0.808);
+   
+}
+.signin form{
+    display:flex;
+    flex-direction:column;
+}

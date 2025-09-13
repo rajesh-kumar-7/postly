@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/stylesheets/home.css">
+</head>
+<body>
+    <div class="username">
+        <h1>WELCOME TO POSTLY</h1>
+    </div>
+    <div class="logout">
+
+        <form action="/logout" method="get">
+            <input type="submit" value="logout">
+            
+        </form>
+    </div>
+    <div class="postform">
+        <form method="post" action="/createpost" enctype="multipart/form-data">
+            <textarea id="text" name="content" placeholder="what's on your mind" ></textarea>
+            <input type="file" id="file" name="image" accept="image/*" hidden>
+            <label for="file" id="file-upload" class="upload-btn">📷 Upload an Image</label>
+            <input id="input" type="submit" value="create post">
+        </form>
+    </div>
+    <h2 id="latest"> LATEST POSTS</h2>
+    <div class="posts">
+        <% if (post.length > 0) { %>
+        <%post.forEach(post=>{%>
+            <div>
+
+                <div class=postcontent>
+                    <h4 id="username"> <%= post.user.username %></h4>
+                    <p id="content"> <%= post.content %></p>
+                    <% if (post.image && post.image.data) { %>
+                        <img src="/posts/<%= post._id %>/image" style="max-width:300px; margin-top:10px;">
+                    <% } %>
+                    <form action="/delete/<%=post._id%>" method="post">
+                        <input type="submit" value="delete" id="delete">
+                    </form>
+                </div>
+            </div>
+            <% })%>
+        </div>
+        <%}else{%>
+            <h1> no posts</h1>
+            <%}%>
+</body>
+</html>
