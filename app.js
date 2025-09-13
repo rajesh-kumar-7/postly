@@ -37,7 +37,11 @@ app.post('/register',(req,res)=>{
 app.post('/signin', async (req,res)=>{
     let user = await usermodel.findOne({email:req.body.email});
     if(!user){
-       return  res.send("something went wrong try again!");
+       return  res.send(`
+              <script>
+              alert("invalid username or password");
+              window.history.back();
+              </script>`)
 
     }
     if(user){
@@ -48,7 +52,11 @@ app.post('/signin', async (req,res)=>{
             res.redirect('/home');
           }
           if(!result){
-            res.send("invalid username or password");
+            res.send(`
+              <script>
+              alert("invalid username or password");
+              window.history.back();
+              </script>`)
           }
 });
     }
